@@ -1,0 +1,355 @@
+/************ HEADER *******************/
+
+body > header {
+    height: 60rem;
+    background: url(../images/bg.jpg) no-repeat center center;
+    background-size: cover;
+
+}
+
+body {
+    min-width: 19rem;
+    background: url(../images/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+a {
+    color: white;
+}
+li {
+    list-style: none;
+}
+
+#nav_header {
+    background-color: #703349;
+    opacity: 0.8;
+
+    -webkit-box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+#nav_header ul {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#nav_header li {
+    display: inline-block;
+    width: 17rem;
+    text-align: center;
+    height: 4rem;
+}
+
+#nav_header a {
+    white-space: nowrap;
+    letter-spacing: 0.2rem;
+    color: white;
+    line-height: 4rem;
+}
+
+#learning_journal > a {
+    background-color: #737C39;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 0.3rem 1rem;
+}
+
+/*************** SUBTITLE ***************/
+
+#nav_subtitle {
+
+    position: relative;
+    top: 4rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5rem 0;
+    border-top: 0.2rem dotted white;
+    border-bottom: 0.2rem dotted white;
+    color: white;
+    text-align: center;
+    line-height: 200%;
+}
+
+#nav_subtitle h3 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+
+}
+
+#nav_subtitle h2 {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.7rem;
+    letter-spacing: 0.4rem;
+
+}
+
+/**************** SECOND NAVIGATION ******************/
+
+#second_nav {
+    display: none;
+    position: absolute;
+    top: 55rem;
+    border-top: 0.5rem solid #703349;
+
+    background-image: url(../images/noise.png);
+    width: 100%;
+    min-width: 52rem;
+
+}
+
+#second_nav > div {
+    width: 33%;
+    display: inline-block;
+}
+
+#second_nav img {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    width: 50%;
+    height: 50%;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+}
+
+.second_nav_wrapper {
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -6rem;
+    width: 11rem;
+    height: 11rem;
+    background-color: #1a1a1a;
+    border: 0.5rem solid #703349;
+
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    -webkit-transition: border 200ms linear;
+    -moz-transition: border 200ms linear;
+    -o-transition: border 200ms linear;
+    transition: border 200ms linear;
+}
+
+.second_nav_wrapper:hover {
+    border: 0.5rem solid #737C39;
+}
+
+/**************** MAIN *****************/
+
+main {
+    position: relative;
+    letter-spacing: 0.05rem;
+}
+
+/**************** COMMON HOTELS & RESTAURANTS *****************/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article, #restaurants div{
+    flex: auto;
+    width: 30rem;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+main h4 {
+    display: none;
+}
+
+/**************** HOTELS *****************/
+
+#hotels article {
+    margin: 0.75rem;
+    position: relative;
+    background-color: rgba(75, 75, 75, 0.6);
+}
+
+#hotels article section {
+    padding-bottom: 5rem;
+    padding-top: 2rem;
+}
+
+#hotels article a {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    background-color: #737C39;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 0.1rem 1rem;
+}
+
+#hotels article ul {
+    text-align: center;
+    list-style: none;
+}
+
+.style ul {
+    text-align: center;
+}
+
+.style li {
+
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #703349;
+    margin: 0 0.3rem;
+    border-radius: 50%;
+}
+
+#hotels article figure figcaption {
+    font-family: 'Poiret One', cursive;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 200%;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 0.3rem;
+    background-color: rgba(112, 51, 73, 0.6);
+}
+
+/**************** RESTAURANTS *****************/
+
+#restaurants div {
+    display: flex;
+    flex-direction: column;
+}
+
+#restaurants div section {
+    flex: auto;
+    margin: 0.75rem;
+    background-color: rgba(112, 51, 73, 0.6);
+    min-height: 22rem;
+}
+
+#restaurants div section figure {
+    max-width: 30rem;
+    margin: 2rem;
+    margin-bottom: 0;
+}
+
+#restaurants div section figure figcaption {
+    color: #B5798E;
+    text-align: center;
+    font-style: italic;
+}
+
+#restaurants div section blockquote {
+    padding: 2rem;
+    text-align: justify;
+}
+
+#restaurants div section blockquote footer {
+    position: relative;
+    right: 0;
+    padding-right: 3rem;
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.lquot {
+    font-size: 5rem;
+    position: relative;
+    top: 1rem;
+}
+
+/************** Footer **************/
+
+body > footer {
+    font-size: 0.9rem;
+    background-image: url("../images/noise.png");
+    color: white;
+    border-top: 0.5rem solid #222222;
+    text-align: center;
+    letter-spacing: 0.02rem;
+}
+body > footer > section {
+    display: inline-block;
+    padding: 0 4rem;
+    margin: 2rem auto;
+    text-align: center;
+    vertical-align: top;
+
+}
+
+body > footer > section > ul > li {
+    white-space: nowrap;
+}
+
+body > footer > section h4{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+body > footer > small {
+    display: block;
+    background-color: #222222;
+    height: 2rem;
+    text-align: left;
+}
+
+/************** MEDIA QUERIES **************/
+
+@media only screen and (min-width: 34rem) {
+
+    #nav_subtitle {
+        top: 12rem;
+    }
+    body > footer > section {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 52rem) {
+
+    main {
+        top: 6.5rem;
+    }
+
+    body {
+        font-size: 120%;
+    }
+
+    #nav_subtitle {
+        width: 60%;
+    }
+
+    #second_nav {
+        display: inline-block;
+    }
+
+    body > footer {
+        position: relative;
+        top: 8rem;
+    }
+
+}
+
+@media only screen and (min-width: 90rem) {
+
+    #restaurants section figure {
+        float: left;
+    }
+
+}

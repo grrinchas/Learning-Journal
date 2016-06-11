@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/html5reset-1.6.1.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/common.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/styles.css" type="text/css"/>
+</head>
+<body>
+<div id="wrapper">
+    <header id="page_header">
+
+        <h1>Learning Journal</h1>
+        <hr/>
+        <p class="subheading">my journey to responsive</p>
+
+        <p class="subheading">web design</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="guide.html">GUIDE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+
+    <form id="form1">
+        <fieldset>
+            <legend>Your contact details</legend>
+            <label for="first_name">Name*</label>
+            <input type="text" required id="first_name"/>
+            <label for="email">Email*</label>
+            <input type="email" id="email" required/>
+            <label for="url">Website</label>
+            <input type="url" id="url" placeholder="http://"/>
+            <label for="tel">Telephone</label>
+            <input type="tel" id="tel" placeholder="+44"/>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Your message</legend>
+            <label for="message_title">Title</label>
+            <input type="text" id="message_title"/>
+            <label for="message">Message: </label>
+            <textarea id="message" placeholder="Enter text here" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Would you like more information?</legend>
+            <input type="radio" id="information-yes" name="information"
+                   value="yes"/>
+            <label for="information-yes" class="radio">Yes</label>
+            <input type="radio" id="information-no" name="information"
+                   value="no" checked/>
+            <label for="information-no" class="radio">No</label>
+        </fieldset>
+        <input type="submit" value="Click to Send"/>
+    </form>
+    <footer id="bottom">
+        <small>
+            &copy; 2015 Dainius Grinciukas <a href="mailto:dg4675dg@gmail.com">dg4675dg@gmail.com</a>
+        </small>
+    </footer>
+</div>
+</body>
+</html>

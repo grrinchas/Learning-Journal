@@ -1,0 +1,1617 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dennis Learning Journal</title>
+    <meta name="description" content="HTML5 and CSS3 learning journal at University of Brighton,
+    for Website Development module"/>
+    <meta name="keywords" content="learning journal, University of Brighton, HTML5, CSS3"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/html5reset-1.6.1.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/common.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/styles.css" type="text/css"/>
+</head>
+<body>
+<div id="wrapper">
+
+    <a id="top"></a>
+    <header id="page_header">
+
+        <h1>Learning Journal</h1>
+        <hr/>
+        <p class="subheading">my journey to responsive</p>
+
+        <p class="subheading">web design</p>
+        <nav>
+            <ul>
+                <li><a href="guide.html">GUIDE</a></li>
+                <li><a href="contact_me.html">ABOUT</a></li>
+                <li><a href="#menu">MENU</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr/>
+
+    <main>
+        <!--week 8 -->
+        <article id="week_8">
+            <header>
+                <h3>week 8 - css3 responsive layout</h3>
+
+                <p class="published">Published on
+                    <time datetime="2015-11-28">November 28, 2015</time>
+                </p>
+                <p>
+                    This is eight-week since I started to learn <abbr title="HyperText Markup Language">HTML5</abbr>
+                    and <abbr title="Cascade Style Sheet">CSS3</abbr> and today I will cover flexbox - new
+                    <abbr title="Cascade Style Sheet">CSS3</abbr> box model and also I will review my own
+                    website.
+                </p>
+            </header>
+            <hr/>
+            <blockquote cite="http://www.w3.org/TR/css-flexbox-1/" id="w8_flexbox">
+                <p> Flex layout is superficially similar to block layout. It lacks many of the more complex text- or
+                    document-centric properties that can be used in block layouts, such as floats and columns. In
+                    return,
+                    it
+                    gains simple and powerful tools for distributing space and aligning content in ways that web apps
+                    and
+                    complex web pages often need.
+                </p>
+                <footer>
+                    <a href="http://www.w3.org/TR/css-flexbox-1/"> — W3 Specification
+                    </a>
+                </footer>
+            </blockquote>
+            <p>
+                First of all from specification we can see that flexbox is a layout similar to block layout used
+                for
+                easy distribution of space and content alignment. At first, flex layout may seem too complicated, but
+                when you start to get using it, you will see that with this layout you can accomplish hard tasks
+                easy.
+            </p>
+            <figure>
+                <img src="images/flexbox.svg" alt="flex box">
+                <figcaption>Flexbox container. Original by
+                    <a href="http://www.w3.org/TR/css-flexbox-1/">w3 specification</a>
+                </figcaption>
+            </figure>
+            <p>
+                This picture illustrates flexbox container. The <i>main axis</i> - is the primary axis along which
+                <i>flex items</i> are layout. <i>Flex items</i> are placed in container starting at <i>main
+                start</i>
+                and
+                ending at the <i>main end</i>. The <i>main size</i> is <i>flex item</i> width or height. <i>Cross
+                axis</i>
+                is
+                axis perpendicular to the <i>main axis</i>. To declare element flex:
+            </p>
+                <pre><code><!--
+                --><span>.container&nbsp;{</span>&NewLine;<!--
+                -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">display:&nbsp;</span><!--
+                --><span class="att">flex;</span>&NewLine;<!--
+                --><span>}</span><!--
+                --></code></pre>
+            <p>
+                Now all direct children of <i>.container</i> will be flex items. You can specify a
+                <i>flex-direction</i>
+                default is <i>row</i> but can be a <i>column</i> and others. Also, <i>flex-wrap</i> which wraps items
+                if
+                needed. With <i>justify-content</i>, you can center element. And to see in practice how flex
+                layout looks and behaves check my <a href="guide.html#hotels/">guide page</a>. Also, if you wish to
+                read
+                more about flexbox - check this website
+                <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">css tricks</a> or <a
+                    href="http://www.w3.org/TR/css-flexbox-1/">w3 specification</a>.
+            </p>
+            <hr>
+            <p id="w8_review">
+                As promised, I will do a review on my website development. First of all,
+                I started to write my website using <a href="https://www.jetbrains.com/idea/">
+                IntelliJ IDEA
+            </a><abbr title="Integrated Development Environment">ide</abbr> for students. I choose this tool
+                because it
+                is the most advanced <abbr title="Integrated Development Environment">ide</abbr> at this moment. It
+                is
+                easy
+                to use, has very nice code completion and much more. All the testing I did with Google Chrome latest
+                version.
+                Mainly because this browser is on all my devices. Second I started to develop my Learning Journal
+                for
+                mobile
+                devices
+                first, because of this book <a
+                    href="http://www.amazon.com/Learning-Responsive-Web-Design-Beginners/dp/144936294X"> Learning
+                Responsive Web Design</a> in which Clarissa Peterson suggested that is always better to design a
+                mobile
+                version of your website and then desktop, not another way. For this reason, I choose Apple iPhone 4 as
+                my
+                starting device with a screen width of 320px and scale factor = 1.0. Because I didn't want that my
+                website will be narrower than this width, I declared <i>min-width</i> of <i>.wrapper</i> to be 19rem,
+                which
+                is almost 326px. I don't have any iphone to test how my website looks, but lucky for me Chrome has
+                a nice
+                tool for this. To activate this feature:
+            </p>
+            <ol>
+                <li>
+                    Press right mouse button in the middle of the web page.
+                </li>
+                <li>
+                    Choose "inspect element" from the menu.
+                </li>
+                <li>
+                    Click on the mobile phone icon on the right-hand side of panel top left corner.
+                </li>
+                <li>
+                    From left panel device drop down list choose Apple iPhone 4.
+                </li>
+            </ol>
+            <p>
+                Nice thing about this feature that you can check how your website looks on different devices. Bad
+                thing
+                that it doesn't take account a browser of that device. So I made a <i class="tag">header</i> of
+                Learning
+                Journal and some <i class="tag">articles</i>. Later I added references at the bottom of my page.
+                Everything was good except
+                <i class="tag">aside</i> element with a menu, I couldn't fit on my mobile page. At first I though I
+                will
+                hide it and will be done with it, but that is a bad design decision because mobile users want the same
+                functionality as desktop users, and it is really annoying to scroll along the page looking for
+                something.
+                So I moved my menu to the end of page, just before <i class="tag">footer</i> and added a link to this
+                menu
+                in the header navigation. When I had a mobile version of my Learning Journal done, to make it responsive
+                to
+                other devices was a piece of cake. Little by little I increased the size of a page until I noticed that
+                page
+                doesn't look good anymore, then I took note of screen size in pixels, went to this website
+                <a href="http://pxtoem.com/">px to em</a>, converted pixels to ems, and created media query. In
+                which
+                I increased font size, or moved <i class="tag">aside</i> element on the side, or did something else.
+                Please note that
+                I did not target specific device width such as iPad or 1024px for laptops. I choose media queries
+                entry
+                point based on my own perception of a website, except iPhone 4, only because we have to start at
+                somewhere.
+            </p>
+        </article>
+        <nav>
+            <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#bottom">BOTTOM</a></li>
+            </ul>
+        </nav>
+        <!--week 7 -->
+        <article id="week_7">
+            <header>
+                <h3>week 7 - flexible media</h3>
+
+                <p class="published">Published on
+                    <time datetime="2015-11-21">November 21, 2015</time>
+                </p>
+                <p>
+                    This week I have learned about flexible media, which includes images and video. But first I
+                    would
+                    like
+                    to talk about some colour basics (rgba colour model and how to specify colour in <abbr
+                        title="Cascade Style Sheet">CSS</abbr>). Also, I will cover some tools which are very useful
+                    for developing a website.
+                </p>
+            </header>
+            <hr>
+            <p id="w7_color_map">
+                As we know everything what computers understand is 0's and 1's, because of that we have to have a
+                way
+                to represent things in the digital word. For characters, we have
+                <abbr title="American Standard Code for Information Interchange">ASCII</abbr> or
+                <i>UNICODE</i> schemes which map every character as a number.
+                And it is not hard we take the letter 'J' and mapped it to '100 1010' in a binary or '74' in decimal.
+                But how to map a colour? How to represent a blue or orange color as a number? Well, we can do it
+                like we did with characters. We take any possible color and map it to specific number. The human eye
+                can
+                differentiate only about 10 million colours so there is no need to map all possible colors in the
+                universe.
+                And that's the good news, the bad news that we still need to represent 10 million colours.
+                The <a href="https://en.wikipedia.org/wiki/Trichromacy">trichromatic theory</a> says that we can
+                only
+                recognize three primary colors (red, green and blue). Every
+                other colour is a mixed of those three colors. So maybe we can use this principle to map all
+                10 million colours as a mix of red, blue and green. We know that with a byte we can represent 256
+                possible numeric values. So if take one byte to represent a red, one byte for
+                green and one byte for blue, we can have a combination of 256 x 256 x 256 = 16777216 &#8776; 16.8
+                million
+                of possible colours. More than we need it.
+            </p>
+
+            <hr/>
+
+            <p id="w7_rgb_color_model">
+                In the last article, I covered how to represent any color as a mix of red, green and blue. This
+                <a href="https://en.wikipedia.org/wiki/Color_model">color model</a> is called
+                <abbr title="RED GREEN BLUE">RGB</abbr> color model. If we add extra opacity value, we will have
+                <i>rgba</i> color model.
+            </p>
+            <figure>
+                <img src="images/rgba.png" alt="rgba color model">
+                <figcaption>RGBA color model. Original by
+                    <a href="https://en.wikipedia.org/wiki/RGBA_color_space">
+                        https://en.wikipedia.org/wiki/RGBA_color_space</a>
+                </figcaption>
+            </figure>
+            <p>
+                If we want to specify a color for <abbr title="HyperText Markup Language">HTML5</abbr> element we can
+                do it
+                in <abbr title="Cascade Style Sheet">CSS</abbr> by providing values for red, green, blue and
+                optional
+                opacity. We can do it in decimal format, or in hexadecimal. The advantage of using hex format that
+                is
+                shorter and more readable. The disadvantage that we can't represent opacity. Another way to specify
+                a
+                color is to use color names. Here are some css examples:
+            </p>
+            <pre><code><!--
+                --><span class="comment">/* Specifying color in rgba notation */</span>&NewLine;<!--
+                --><span>body&nbsp;{</span>&NewLine;<!--
+                -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">background-color:&nbsp;</span><!--
+                --><span class="att">rgba(128, 128, 128, 0.5);</span>&NewLine;<!--
+                --><span>}</span>&NewLine;&NewLine;<!--
+                --><span class="comment">/* Specifying color in hex notation */</span>&NewLine;<!--
+                --><span>body&nbsp;{</span>&NewLine;<!--
+                -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">background-color:&nbsp;</span><!--
+                --><span class="att">#808080;</span>&NewLine;<!--
+                --><span>}</span>&NewLine;&NewLine;<!--
+                --><span class="comment">/* Specifying colour with colour name */</span>&NewLine;<!--
+                --><span>body&nbsp;{</span>&NewLine;<!--
+                -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">background-color:&nbsp;</span><!--
+                --><span class="att">grey;</span>&NewLine;<!--
+                --></code></pre>
+            <hr/>
+            <p id="w7_digital_images">
+                You often hear term "digital image", but what that means? It means that image is represented as
+                digits
+                (usually binary) opposed to paper image. It has two dimensions, which is a very fancy word for width
+                and
+                height. Also, there are two types of digital images:
+            </p>
+            <ul>
+                <li>
+                    <i>raster image</i> - which has fixed size of pixels. So if you increase the size of an image it
+                    will
+                    lose quality because a computer will take the best guest which pixel to insert in the image. The
+                    advantage
+                    of raster images that you can modify it very precisely, pixel by pixel.
+                </li>
+                <li>
+                    <i>vector image</i> - doesn't have fixed size of pixels. The lines on an image are represented by
+                    vectors,
+                    because of this reason it can be scaled infinitely and will not loose quality. The bad side is
+                    that
+                    vector images are not so color detailed as raster (bitmap) images.
+                </li>
+            </ul>
+            <p>
+                You can use both vector and raster images on your website. How to add an image you can read it
+                on my first-week post <a href="#w1_add_image">add an image</a>.
+            </p>
+            <hr/>
+            <p id="w7_tools">
+                I decided to write an extra article about tools which I used for creating this website.
+            </p>
+            <ul>
+
+                <li>
+                    <a href="http://www.cssmatic.com/box-shadow">Shadow generator</a> - used this tool to generate a
+                    shadow whenever I needed. It is easy to use a tool, you can choose shadow and background colors,
+                    specify inset, even opacity. And you copy <abbr title="Cascade Style Sheet">CSS</abbr> code
+                    just
+                    with one click.
+                </li>
+                <li>
+                    <a href="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF">Palleton</a> - used this tool for
+                    creating a color palette for my website. It is a very sophisticated tool, has many options - you
+                    can
+                    choose a color by providing hex value or from a color wheel, get complementary adjacent and other
+                    colors.
+                    It is must have tool for web developers.
+                </li>
+                <li>
+                    <a href="http://www.colorzilla.com/gradient-editor/">Gradient generator</a> - for creating
+                    gradients.
+                    There are many gradient generators online, but I like this one for options which it provides. You
+                    choose
+                    from presets or you can create your own, change orientation with one click.
+                </li>
+                <li>
+                    <a href="https://pixlr.com/editor/">Online image editor</a> - for editing images. Whenever I
+                    wanted
+                    fast edit an image - resize, add filters, change color or save an image for the web this is the best
+                    tool.
+                    For more sophisticated image adjustments I used Photoshop.
+                </li>
+                <li>
+                    <a href="http://galacticmilk.com/bg/">Pattern generator</a> - for my guide page. It is easy to
+                    use
+                    tool. Choose from any supplied pattern and modify it the way you want it. All applied changes
+                    you
+                    can see in real time.
+                </li>
+                <li>
+                    <a href="http://www.css3maker.com/css3-transform.html">Transform generator</a> - whenever I
+                    needed to
+                    apply transformations.
+                </li>
+                <li>
+                    <a href="https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en">What
+                        font</a> -
+                    Chrome extension for checking fonts. It is very useful tool to have, you can check any font on
+                    the
+                    web.
+                    See what fonts professional sites are using and combine these ideas with your own.
+                </li>
+                <li>
+                    <a href="http://www.colorzilla.com/chrome/">Color eyedropper</a> - Chrome extension for checking
+                    colors
+                    on websites. Sometimes you are surfing online and notice nice color, which you would like to
+                    have
+                    to yourself, this tool will help you to get a hex code for that color.
+                </li>
+                <li>
+                    <a href="http://pxtoem.com/">px to em</a> - very useful tool for creating media queries.
+                </li>
+            </ul>
+        </article>
+        <nav>
+            <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#bottom">BOTTOM</a></li>
+            </ul>
+        </nav>
+
+        <!--week 6 -->
+        <article id="week_6">
+            <header>
+                <h3>week 6 - introduction to responsive web design</h3>
+
+                <p class="published">Published on
+                    <time datetime="2015-11-14">November 14, 2015</time>
+                </p>
+                <p>
+                    This week I learned about <abbr title="Responsive Web Design">RWD</abbr> - Responsive Web
+                    Design,
+                    more particularly why do we need it and about three main
+                    <abbr title="Responsive Web Design">RWD</abbr> techniques.
+                </p>
+                <hr/>
+                <p id="w6_why_RWD">
+                    So why we need <abbr title="Responsive Web Design">RWD</abbr>, wouldn't be easier just to create
+                    websites which are fixed size and non-responsive? The answer is "yes" it would be easier, and
+                    this
+                    approach was the best for more than 20 years. The main issue with fixed layout is that it can't
+                    accommodate increasing variety of mobile phones and tablets. And as you can see from the graph below
+                    people
+                    use more phones to connect to the Internet than laptops. Responsive web design provides
+                    techniques
+                    for designers to create a website which will look good on all these devices.
+                </p>
+                <figure>
+                    <img src="images/devices.png" alt="devices to connect to internet">
+                    <figcaption>Which is the most important device you use to connect to the Internet. Original by
+                        <a href="http://fortune.com/2015/08/07/apple-post-pc-world/">
+                            http://fortune.com/</a>
+                    </figcaption>
+                </figure>
+
+                <hr/>
+                <p id="w6_viewport">
+                    Viewport attribute - first thing for <abbr title="Responsive Web Design">RWD</abbr> is to
+                    include
+                    <i class="attr">viewport</i> attribute for <i class="tag">meta</i> element in document's <i
+                        class="tag">head</i>
+                </p>
+                    <pre><code><!--
+                --><span class="tag">&lt;meta</span>&nbsp;<!--
+                --><span class="att">name</span>=<!--
+                --><span class="value">&quot;viewport&quot;</span>&nbsp;<!--
+                --><span class="att">content</span>=<!--
+                --><span class="value">&quot;width=device-width, initial-scale=1&quot;</span>&nbsp;<!--
+                --><span class="value">/&gt;</span>&nbsp;<!--
+                --></code></pre>
+                <p>
+                    <i>width=device-width</i> - instructs browser to render viewport size to device-width. So that
+                    mobile
+                    browser will behave the same as desktop one. Width value can be specific pixel size like
+                    width=600.
+                    <i>initial-scale=1"</i> – tells the browser to render the webpage at full-size when it's
+                    loaded,
+                    rather than scaling it down. The <i>maximum-scale</i>, <i>minimum-scale</i>, and
+                    <i>user-scalable</i>
+                    properties control how users are allowed to zoom the page in or out.
+                </p>
+                <hr/>
+                <p id="w6_media_query">
+                    The second thing is <abbr title="Cascade Style Sheet">CSS</abbr> media queries, which allow you to
+                    apply
+                    <abbr title="Cascade Style Sheet">CSS</abbr> rules specific to the width of the device. The query
+                    can check
+                    not just width, but height, orientation such as landscape or portrait, resolution and more. This
+                    way
+                    you have a lot of options to control how your website looks on a particular device. These queries
+                    work very simple:
+                </p>
+                <ul>
+                    <li>First they check how big the screen is.</li>
+                    <li>And then they apply those <abbr title="Cascade Style Sheet">CSS</abbr> rules, which are for
+                        that size of the screen.
+                    </li>
+                </ul>
+                <p>
+                    Let's say I want my desktop version web page would have an <i class="tag">aside</i> element, but
+                    I
+                    don't
+                    want it on mobile version, so my <abbr title="Cascade Style Sheet">CSS</abbr> would look
+                    something
+                    like this:
+                </p>
+                <pre><code><!--
+                --><span class="att">@media&nbsp;</span><!--
+                --><span class="tag">&nbsp;only&nbsp;screen&nbsp;</span><!--
+                --><span>and &nbsp;(</span><!--
+                --><span class="tag">max-width:&nbsp;400px</span><!--
+                --><span>)&nbsp;{</span>&nbsp;&NewLine;<!--
+                -->&nbsp;&nbsp;&nbsp;&nbsp;<span>aside&nbsp;{</span>&nbsp;<!--
+                --><span class="tag">display:&nbsp;</span><!--
+                --><span class="att">none;&nbsp;</span><!--
+                --><span>}</span>&NewLine;}<!--
+                --></code></pre>
+
+                <ul>
+                    <li>
+                        <i class="att">@media</i> - tells the browser that this is media query.
+                    </li>
+                    <li>
+                        <i class="tag">only</i> - is for older browsers, which do not support media query.
+                        <i class="tag">only</i> will hide this query from them.
+                    </li>
+                    <li>
+                        <i class="tag">screen</i> - targets devices which have a screen.
+                    </li>
+                    <li>and - logical AND operator which applies these rules only then left side of media query
+                        (screen
+                        only) and right hand side (max-width: 400px) are both true.,
+                    </li>
+                    <li><i class="tag">max-width: 400px</i> - targets devices with a width of 400px and less, that means
+                        if
+                        the screen is smaller than 400px it will hide <i class="tag">aside</i> element.
+                    </li>
+                </ul>
+                <p>
+                    Note that on my web page I used little bit different media query. Instead of using
+                    <i class="tag">max-width</i> I used <i class="tag">min-width: 34rem</i>, which applies rules
+                    only
+                    when
+                    screen is equal or bigger than 34rem. Because I started to develop my website for mobile
+                    devices
+                    and then gradually increased size. It is easier to add content as screen size grows rather
+                    shrink
+                    it.
+                </p>
+
+            </header>
+        </article>
+        <nav>
+            <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#bottom">BOTTOM</a></li>
+            </ul>
+        </nav>
+        <!-- Fifth week post-->
+        <article id="week_5">
+            <header>
+                <h3>week 5 - CSS cascade and more</h3>
+
+                <p class="published">Published on
+                    <time datetime="2015-10-31">October 31, 2015</time>
+                </p>
+                <p>
+                    This week I learned about <abbr title="Cascade Style Sheet">CSS</abbr> cascade, box model, and
+                    measurements. Also, I styled some <abbr title="HyperText Markup Language">HTML5</abbr> elements
+                    <i class="tag">body</i> and <i class="tag">header</i>.
+                </p>
+            </header>
+            <hr/>
+            <p id="w5_css_cascade">
+                So what exactly is <abbr title="Cascade Style Sheet">CSS</abbr> cascade?
+                Every time when we write a <abbr title="Cascade Style Sheet">CSS</abbr> rule, that rule may be applied
+                not
+                just one <abbr title="HyperText Markup Language">HTML5</abbr> element, in fact, most of the time it
+                is
+                applied to many elements. Most important factor of deciding how rules are applied is selector's
+                specificity, it means that if a selector is more specific it overrides more general selector. If two
+                selectors are identical, then last defined in the stylesheet will take precedence. Of course, sometimes
+                you
+                want to break this rules, and you can do it with <i class="tag">!important</i> keyword after the value.
+                And this rule can not be overridden by any other rule.
+            </p>
+            <hr/>
+            <p id="w5_box_model">
+                <abbr title="Cascade Style Sheet">CSS</abbr> sees all elements as boxes. And all boxes have three
+                things:
+                border, margin and padding. The main thing which is in the middle of the box is an actual content,
+                it
+                can be text in <i class="tag">h1</i> element link in
+                <i class="tag">a</i> element. Some boxes may not
+                have content or it may be not visible. Padding is a space which surrounds a content it may be zero
+                or as
+                much big as you want to be, after padding, comes a border and margin. Margin is a space between
+                other
+                elements in a page. By specifying margin and padding we can control how much empty space is on a
+                page.
+                Don't be afraid to put more space, it helps for readability as well as find things which is more
+                important.
+            </p>
+            <figure>
+                <img src="images/box-model.gif" alt="box model">
+                <figcaption>Box Model with margin, border and padding. Original by
+                    <a href="http://www.w3schools.com/css/css_boxmodel.asp">http://www.w3schools.com</a>
+                </figcaption>
+            </figure>
+            <hr/>
+
+            <p id="w5_measurements">
+                <abbr title="Cascade Style Sheet">CSS</abbr> has many units of measurements some are relative (em,
+                rem,
+                %, ex..) and absolute (cm, mm, in, px..). We shouldn't use absolute units in
+                <abbr title="Responsive Web Design">RWD</abbr> so I will not mention them, except pixels (px).
+            </p>
+            <ul>
+                <li>
+                    <i> % (percentage)</i> - Defines a measurement as a percentage relative to another element,
+                    usually, it is an enclosing element. Best usage is for layouts, on my site I used this element to
+                    position
+                    <i class="tag">main</i> and <i class="tag">aside</i> elements side by side so that
+                    <i class="tag">main</i>
+                    occupies 60% and <i class="tag">aside</i> - 40% space of enclosing
+                    <i class="tag">div</i>. Also,
+                    I used <i>%</i> do define root element's font size. So if
+                    <i class="tag">html</i> element font-size
+                    property is 100%, then real font-size is equal to default browser's font size which in most
+                    cases
+                    is 16px.
+                </li>
+                <li>
+                    <i>em</i> - Defines a measurement relative to font size of that element. Let's say font size of
+                    <i class="tag">body</i> is 16px, so 1em will be 16px, 2em-32px. And we don't have any problem
+                    with
+                    this unit until we start using this to define font size. Let's say a
+                    <i class="tag">body</i> has
+                    a font-size of 2em, and we want a
+                    <i class="tag">header</i> to be twice as big as any element in the
+                    <i class="tag">body</i> so the logic would suggest making <i class="tag">header</i> element
+                    4em,
+                    but that wouldn't be correct. Because
+                    <i class="tag">header</i> element inherited font size of 2em,
+                    from its enclosing
+                    <i class="tag">body</i> element. And 4em relative to 2em altogether is 8em. The
+                    Correct way would be to set up
+                    <i class="tag">header</i> element to 2em, and it will have twice as
+                    big font size as <i class="tag">body</i> element.
+                </li>
+                <li>
+                    <i>rem</i> - Is very similar to <i>em</i> and defines a measurement relative to <em>ROOT</em>
+                    element font size, which in <i class="tag">html</i> element. Because
+                    <i>rem</i> is very flexible and
+                    doesn't have pitfalls as <i>em</i> is a perfect for
+                    <abbr title="Responsive Web Design">RWD</abbr>.
+                    For this reason, I used this measurement extensively.
+                </li>
+                <li>
+                    <i>ex</i> - Is a measurement relative to a font's x-height, which is the height of font's lowercase
+                    letter
+                    x. This is unit is not very popular, and I don't see any reason to use
+                    <i>ex</i> instead of
+                    <i>em</i> or <i>rem</i>.
+                </li>
+                <li>
+                    <i>px</i>- It is the relative measurement to the resolution to the screen on the device. This unit
+                    was
+                    the most popular between web designers because it gave the most control of how a page will be
+                    displayed
+                    on screens. And it was ok for a decade because most devices had very similar pixel density.
+                    Unfortunately
+                    now new devices such as smartphones have four times bigger resolution than an old monitor. In other
+                    words,
+                    physical pixels became much smaller.
+                    And that's the way it is not suitable for <abbr title="Responsive Web Design">RWD</abbr>.
+                </li>
+            </ul>
+        </article>
+
+        <nav>
+            <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#bottom">BOTTOM</a></li>
+            </ul>
+        </nav>
+        <!-- Fourth week post-->
+        <article id="week_4">
+            <header>
+                <h3>week 4 - CSS basics</h3>
+
+                <p class="published">Published on
+                    <time datetime="2015-10-24">October 24, 2015</time>
+                </p>
+                <p>
+                    This week I started to learn
+                    <abbr title="Cascade Style Sheet">CSS</abbr>. This includes syntax, selectors,
+                    how to attach an external file to the
+                    <abbr title="HyperText Markup Language">HTML5</abbr> document etc. I decided to go with the
+                    minimalistic design. But to make it look good, I had to learn more about typographic and color
+                    palettes. So let's get started.
+                </p>
+            </header>
+            <hr/>
+            <p id="w4_external_css">
+                It is always better to attach external style sheet rather embed a style in the
+                <abbr title="HyperText Markup Language">HTML5</abbr> markup. This will make maintenance of your
+                site
+                much easier.
+                You do this in the
+                <i class=tag>head</i>, with
+                <i class=tag>link</i> element. Attribute <i class=att>href</i> points to a file with
+                <abbr title="Cascade Style Sheet">CSS</abbr> rules,
+                <i class=att>rel</i> - specifies relationship between a document and a file which is attached to it, and
+                <i class=att>type</i> - a type of file.
+            </p>
+             <pre><code><!--
+                --><span class="tag">&lt;link</span>&nbsp;<!--
+                --><span class="att">href</span>=<!--
+                --><span class="value">&quot;style.css&quot;</span>&nbsp;<!--
+                --><span class="att">rel</span>=<!--
+                --><span class="value">&quot;stylesheet&quot;</span>&nbsp;<!--
+                --><span class="att">type</span>=<!--
+                --><span class="value">&quot;type/text&quot; /&gt;</span>&nbsp;<!--
+                --></code></pre>
+            <hr/>
+            <p id="w4_reset_vs_normalize">
+                Every browser has their own way of displaying
+                <abbr title="HyperText Markup Language">HTML5</abbr> elements. Older one's may not even recognize
+                new
+                elements. And this is a problem, because even if you make your own stylesheet, different browsers
+                display it differently. The solution for this problem is to use reset or normalize
+                <abbr title="Cascade Style Sheet">CSS</abbr>.
+                Which is external first external stylesheet attached to the page.
+            </p>
+            <ul>
+                <li>
+                    Reset stylesheet removes all borders, margins from elements, makes some inline elements to be
+                    block
+                    etc. In other words, it resets all values of elements to zero and you start styling those
+                    elements
+                    as new. I used this -
+                    <a href="https://code.google.com/p/html5resetcss/downloads/detail?name=html5reset-1.6.1.css&can=2&q=">
+                        reset.css </a>
+                </li>
+                <li>
+                    Normalize in other hand doesn't reset all default values. It fixes some bugs, especially with
+                    new <abbr title="HyperText Markup Language">HTML5</abbr> elements. Personally, I prefer reset.css
+                    rather normalize.css because it gives you more control over elements. You can find
+                    here <a href="https://necolas.github.io/normalize.css/">normalize.css</a>
+                </li>
+            </ul>
+            <hr/>
+            <p id="w4_css_selectors">
+                One disadvantage of putting all your styles in the external file is that it has to target
+                <abbr title="HyperText Markup Language">HTML5</abbr> elements. We doing that with selectors and the good
+                news is that <abbr title="Cascade Style Sheet">CSS</abbr> has plenty of selectors.
+            </p>
+
+            <div class="big_thing">
+                <table>
+                    <tr>
+                        <th scope="col">SELECTOR</th>
+                        <th scope="col">MEANING</th>
+                        <th scope="col">EXAMPLE</th>
+                    </tr>
+                    <tr>
+                        <td>Universal Selector</td>
+                        <td>Applies to all elements in a document</td>
+                        <td>* {}</td>
+                    </tr>
+                    <tr>
+                        <td>Type Selector</td>
+                        <td>Matches element names</td>
+                        <td>h1, h2 h3 {}</td>
+                    </tr>
+                    <tr>
+                        <td>Class Selector</td>
+                        <td>Matches an element whose class attribute has the same value</td>
+                        <td>.example {}</td>
+                    </tr>
+                    <tr>
+                        <td>ID Selector</td>
+                        <td>Matches an element whose id attribute has the same value</td>
+                        <td>#main_header {}</td>
+                    </tr>
+                    <tr>
+                        <td>Child Selector</td>
+                        <td>Matches an element that is a direct child of another</td>
+                        <td>li > a {}</td>
+                    </tr>
+                    <tr>
+                        <td>Descendant Selector</td>
+                        <td>Matches an element that is a descendant of another specified
+                            element (not just a direct child of that element)
+                        </td>
+                        <td>p a {}</td>
+                    </tr>
+                    <tr>
+                        <td>Adjacent Sibling Selector</td>
+                        <td>Matches an element that is the next sibling of another</td>
+                        <td>h1 + p {}</td>
+                    </tr>
+                </table>
+            </div>
+            <hr/>
+            <p id="w4_typography">
+                One of the most neglected thing in web design is typography. But what exactly that is? I always
+                thought
+                that is just about a font, but is not. It is more like an art of displaying text. It involves page
+                layout,
+                space between paragraphs, words, lines letters, margins, text formatting, text composition etc. Very
+                good resource of learning about all of this is <cite>Typography for Lawyers</cite> by Matthew
+                Butterick,
+                you can buy it at Amazon
+                <a href="http://www.amazon.co.uk/Typography-Lawyers-Matthew-Butterick/dp/1598390775">
+                    Typography for Lawyers</a> or read it online
+                <a href="http://practicaltypography.com">http://practicaltypography.com</a>.
+                Most important typography rules which I used on my Learning Journal are
+            </p>
+
+            <p class="spec">
+                Font size should be between 15-25px. I decided to go with responsive font size, for this reason,
+                I used em's measurements. Which is relative size to the browser default font size, which in most
+                cases are 16px. Usually, people small devices (phones, tablets) use not far away from their eyes,
+                that's way font can be smaller 15px, but when we increase device screen size the distance from their
+                eyes and screen increases as well, and we have to increase font size.
+            </p>
+
+            <p>
+                Very important measurement is line length. Which is character count including spaces on the line.
+                On average length should be between 45-90 characters. Of course, when developing sites, it would be
+                ridiculous to count every character when you make a change. The easiest way is to create two strings
+                45 and 90 characters long and see how they wrap on the line. To have even more control of line
+                length
+                you can set min and max values to the container, this way the length of the line will not be less than
+                45
+                and
+                more than 90.
+            </p>
+
+            <p class="spec">
+                Don't use default fonts such as Arial or Verdana as well as goofy looking fonts. It is good to use
+                them
+                for page titles, but not for main content unless you really want to scare your visitors that they
+                would not come back to your site again. The best option is to use professional looking fonts, but
+                of course, for most of them, you have to pay. The alternative would be to use
+                <a href="https://www.google.com/fonts">google fonts</a>. For my journal, I decided to go with classic
+                looking
+                font EB Garamond which you can find at
+                <a href="https://www.google.com/fonts#UsePlace:use/Collection:EB+Garamond">
+                    EB Garamond </a>. One disadvantage of using online font's that they have to be downloaded before
+                use
+                and that may slow down your site. Also don't use more than three fonts per site.
+            </p>
+
+            <p>
+                Don't be afraid of white space, letter spacing should be between 120-145% of font size, don't use
+                underlining, use bold or italic sparingly and there are much more recommendations for your text to
+                look professional. Again I recommend read this at
+                <a href="http://practicaltypography.com/">http://practicaltypography.com</a>.
+                One good way of choosing fonts for your website is to check others people website. And if you using
+                Chrome you can download extension
+                <a href="https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en">
+                    what font</a> which lets you find out what font is being used on the site.
+            </p>
+        </article>
+        <nav>
+            <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#bottom">BOTTOM</a></li>
+            </ul>
+        </nav>
+        <!-- Third week post-->
+        <article id="week_3">
+            <header>
+                <h3>week 3 - more html5 markup</h3>
+
+                <p class="published">Published on
+                    <time datetime="2015-10-17">October 17, 2015</time>
+                </p>
+                <p>
+                    This is the third week since I started to learn <abbr title="HyperText Markup Language">HTML5</abbr>.
+                    And I could say that I am getting a good grasp of it.
+                    While my site still does not look very attractive and doesn't have a lot of content, but the
+                    <abbr title="HyperText Markup Language">HTML5</abbr> code looks pretty good.
+                    I finished reading all the chapters about
+                    <abbr title="HyperText Markup Language">HTML5</abbr> in the
+                    <cite>HTML & CSS: Design and Build Web Sites</cite> by Jon Duckett, which covered rest of
+                    elements.
+                    So this week I learned how to ...
+                </p>
+            </header>
+            <hr/>
+
+            <p id="w3_main_aside">Use the <i class=tag>main</i> and <i class=tag>aside</i> elements.
+                <i class=tag>main</i> element marks
+                main content of your page. Inside
+                <i class=tag>main</i> you can contain sectioning elements such as
+                <i class=tag>article</i> or <i class=tag>section</i>. Because every page has only one main content
+                you shouldn't use more than one <i class=tag>main</i> element in a page. On another hand
+                <i class=tag>aside</i>
+                is different. It can be used more than once. Although there are two ways of using it.
+            </p>
+            <ul>
+                <li>Outside <i class=tag>main</i> element - Is not relevant to the main content and mostly
+                    represents
+                    extra navigation, similar to the &quot;sidebar&quot;.
+                </li>
+                <li>Inside tje <i class=tag>main</i> element - Has to be relevant to the main content to which it points
+                    to.
+                    It can be extra information relative to the article which was not covered in the main article.
+                </li>
+            </ul>
+            <hr/>
+            <p id="w3_section_article">
+                The difference between <i class=tag>section</i> and
+                <i class=tag>article</i>. At first impression, these elements
+                are very similar, but they are not interchangeable. The section is more general which represents
+                document's
+                section under a generic heading. Very good example is in newspapers under advertisement heading
+                where
+                we have different advertisements for cars. The <i class=tag>section</i> shouldn't
+                be used only for styling purposes, for that we have <i class=tag>div</i> element, also, a
+                <i class=tag>section</i>
+                should have a heading (for the difference between <i class=tag>header</i> and <i class=tag>h1</i> -
+                <i class=tag>h2</i> you can find on my previous post <a href="#w1_headers">here</a>). The
+                <i class=tag>article</i> is
+                a more specific type of
+                <i class=tag>section</i> element. On newspaper analogy advertisement for a specific car would
+                be an article. Always try to use more specific element <i class=tag>article</i> instead of
+                more general <i class=tag>section</i> whenever is possible.
+            </p>
+             <pre><code><!--
+                --><span class="tag">&lt;section&gt;</span>&NewLine;<!--
+                -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span><!--
+                --><span class="text">Cars</span><!--
+                --><span class="tag">&lt;/h1&gt;</span>&NewLine;<!--
+                -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;article&gt;</span>&NewLine;<!--
+                -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h2&gt;</span><!--
+                --><span class="text">PEUGEOT 307</span><!--
+                --><span class="tag">&lt;/h2&gt;</span>&NewLine;<!--
+                -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span><!--
+                --><span class="text">Description</span><!--
+                --><span class="tag">&lt;/p&gt;</span>&NewLine;<!--
+                 -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;footer&gt;</span><!--
+                --><span class="text">Contact Details</span><!--
+                --><span class="tag">&lt;/footer&gt;</span>&NewLine;<!--
+                -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/article&gt;</span>&NewLine;<!--
+                --><span class="tag">&lt;/section&gt;</span><!--    
+           --></code></pre>
+
+            <hr/>
+            <p id="w3_creating_tables">
+                Create tables using <abbr title="HyperText Markup Language">HTML5</abbr>. For this we use
+                <i class=tag>table</i>
+                element. It contains tabe rows <i class=tag>tr</i>, which has table headings <i class=tag>th</i>
+                and table data <i class=tag>td</i>.
+            </p>
+            <table>
+                <tr>
+                    <th scope="col">Heading 1</th>
+                    <th scope="col">Heading 2</th>
+                    <th scope="col">Heading 3</th>
+                </tr>
+                <tr>
+                    <td>Item 1</td>
+                    <td>Item 2</td>
+                    <td>Item 3</td>
+                </tr>
+                <tr>
+                    <td>Item 1</td>
+                    <td>Item 2</td>
+                    <td>Item 3</td>
+                </tr>
+            </table>
+
+            <hr/>
+            <p id="w3_head">
+                Read this article
+                <a href="http://docs.webplatform.org/wiki/guides/the_html_head">The html5 &lt;head&gt;.</a>
+                which clearly explains about the <i class=tag>head</i> element and it's attributes. Unlike other
+                <abbr title="HyperText Markup Language">HTML5</abbr> elements, a <i class=tag>head</i> is not
+                directly visible to the user, but that doesn't mean that is not important. The <i class=tag>head</i>
+                contains metadata about the document which is used by web browsers. Elements which you can find inside
+                <i class=tag>head</i> are -
+            </p>
+            <ul>
+                <li>
+                    <i class=tag>title</i> - Is page title. It is visible on top of browser window.
+                </li>
+                <li>
+                    <i class=tag>meta</i> - Is page's metadata. It can contain these attributes (<i
+                        class=att>charset</i>,
+                    <i class=att>content</i>, <i class=att>name</i>, <i class=att>http-equiv</i>,
+                    <i class=att>scheme</i>).
+                </li>
+                <li>
+                    <i class=tag>style</i> - Defines <abbr title="Cascade Style Sheed">CSS</abbr> rules. Please note
+                    that is always better to put all your
+                    <abbr title="Cascade Style Sheed">CSS</abbr> to the external
+                    document and link it with <i class=tag>link</i> element.
+                </li>
+                <li>
+                    <i class=tag>link</i> - Is used for linking stylesheets.
+                </li>
+                <li>
+                    <i class=tag>script</i> - To include javascript.
+                </li>
+                <li>
+                    <i class=tag>noscript</i> - Useful if the browser doesn't support script or it is disabled.
+                </li>
+                <li>
+                    <i class=tag>base</i> - Specifies base <abbr title="Uniform Resource Locator">URL</abbr> for all
+                    relative URL's contained inside the document.
+                </li>
+            </ul>
+            <p>
+                I didn't mention two important things. One of them is global <i class=att>lang</i> attribute, which
+                is used to specify element's language. A good practice is to include this attribute inside
+                <i class=att>html</i>
+                tag. Another thing is <i class=tag>&lt;!doctype html&gt;</i> declaration. Which is not an element,
+                but
+                an instruction for web browser about what version of <abbr
+                    title="HyperText Markup Language">HTML</abbr>
+                page is written in. Declaration should be first thing in a document.
+            </p>
+        </article>
+        <nav>
+            <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#bottom">BOTTOM</a></li>
+            </ul>
+        </nav>
+        <!--Second week post-->
+        <article id="week_2">
+            <header>
+                <h3>week 2 - marking up content in the learning journal</h3>
+
+                <p class="published">Published on
+                    <time datetime="2015-10-12">October 12, 2015</time>
+                </p>
+                <p>
+                    The second week was very busy for me. I bought a
+                    <cite><a href="http://www.amazon.co.uk/HTML-CSS-Design-Build-Sites/dp/1118008189">
+                        HTML &amp; CSS: Design and Build Web Sites</a></cite> book, by Jon Duckett
+                    and read few chapters.
+                    Managed to connect to my W:\ drive remotely.
+                    Arranged my web site's files and folders, by creating a new folder for images in my Web$ workspace
+                    on
+                    the
+                    <a href="http://itsuite.it.brighton.ac.uk/">University of Brighton server</a>.
+                    Also, at lab tutorial finished all exercises and ended up with a well marked up journal.
+                    After the second week I learned how to do the following things:
+                </p>
+            </header>
+
+
+            <hr/>
+
+            <p id="w2_character_entity">
+                Use <abbr title="HyperText Markup Language">HTML5</abbr> character entities references such as
+                <i class="ent">&amp;amp&semi;</i> <i class="ent">&amp;gt</i> or
+                <i class="ent">&amp;lt&semi;</i> for marking up characters which have special
+                meaning in <abbr title="HyperText Markup Language">HTML5</abbr> such as &ldquo;&lt;&rdquo;
+                or &ldquo;&gt;&rdquo;.
+                You can do that by first specifying &ldquo;&amp;&num;&rdquo; followed by Unicode code point in
+                hexadecimal or
+                decimal notation. Or &ldquo;&amp;&rdquo; followed by the name. All entities must end with
+                semicolon &ldquo;&semi;&rdquo;.
+
+            </p>
+
+            <table>
+                <tr>
+                    <th scope="col">Character</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Hexadecimal</th>
+                </tr>
+                <tr>
+                    <td>tab</td>
+                    <td>&amp;Tab&semi;</td>
+                    <td>&amp;&num;x00009&semi;</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>&amp;lt&semi;</td>
+                    <td>&amp;&num;x0003c&semi;</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>&amp;gt&semi;</td>
+                    <td>&amp;&num;x0003e&semi;</td>
+                </tr>
+                <tr>
+                    <td>&ldquo;</td>
+                    <td>&amp;quot&semi;</td>
+                    <td>&amp;&num;x00022&semi;</td>
+                </tr>
+                <tr>
+                    <td>&num;</td>
+                    <td>&amp;num&semi;</td>
+                    <td>&amp;&num;x00023&semi;</td>
+                </tr>
+                <tr>
+                    <td>&amp;</td>
+                    <td>&amp;amp&semi;</td>
+                    <td>&amp;&num;x00026&semi;</td>
+                </tr>
+                <tr>
+                    <td>&semi;</td>
+                    <td>&amp;semi&semi;</td>
+                    <td>&amp;&num;x000rb&semi;</td>
+                </tr>
+
+            </table>
+
+            <hr/>
+
+            <p id="w2_publication_date">
+                Add publication date to my posts using <i class=tag>time</i> element with
+                <i class=att>datetime</i> attribute. Date can be a year, month, day, hour, timezone or mix of all.
+            </p>
+            <pre><code><!--
+                --><span class="tag">&lt;time</span>&nbsp;<!--
+                --><span class="att">datetime</span><!--
+                --><span class="sign">=</span><!--
+                --><span class="value">&quot;2015-10-12&quot;</span><!--
+                --><span class="tag">&gt;</span><!--
+                --><span class="text">October 12, 2015</span><!--
+                --><span class="tag">&lt;/time&gt;</span><!--
+            --></code></pre>
+            <hr/>
+
+            <p id="w2_text_level_semantics">
+                Correctly use text-level semantics <i class=tag>i</i>, <i class=tag>b</i>, <i class=tag>em</i>,
+                <i class=tag>strong</i>, <i class="tag">small</i>, <i class="tag">abbr</i>, <i class="tag">mark</i>
+                elements. Which can be very confusing at first sight.
+            </p>
+
+            <ul>
+                <li>
+                    <i class=tag>i</i> - represents a text which has an alternate voice or mood. Something that is
+                    different in some
+                    kind of way, like translated foreign word, musical notation or voice-over.
+                    It is a good practice to include
+                    <i class=att>class</i> attribute explaining what is exactly different
+                    (alternate voice).
+                </li>
+                <li>
+                    <i class=tag>b</i> - represents a text which should be marked different from the text, but without
+                    any
+                    emphasis or
+                    alternate voice, such as abstract keywords or product names in a review. In other words, if you
+                    want
+                    to make text look different. Use this if there is no better substitute for marking up such as
+                    <i class=tag>h1</i> for headings, <i class=tag>var</i> for mathematical variables. Also, when
+                    using
+                    <i class=tag>b</i>
+                    is good practice to include a <i class=att>class</i> attribute to indicate why the
+                    <i class=tag>b</i> element is being used.
+                </li>
+                <li>
+                    <i class=tag>em</i> - represents emphasis of its content. It's used mostly for change the
+                    meaning of
+                    the
+                    sentence. Note that
+                    <i class="tag">em</i> shouldn't convey an importance, for that we have the
+                    <i class="tag">strong</i> element, also, it shouldn't be used for just
+                    italic text.
+                </li>
+                <li>
+                    <i class="tag">strong</i> - is used to represent strong importance, like a warning or caution.
+                </li>
+                <li>
+                    <i class="tag">small</i> - for small print, such as disclaimers, legal restrictions or
+                    copyright. It
+                    shouldn't be used for subheadings or extended text such as a paragraph. Also strangely, but
+                    <i class="tag">small</i> don't de-emphasize the importance of the text.
+                </li>
+                <li>
+                    <i class="tag">abbr</i> - used to mark up abbreviation or acronym.
+                    <i class="att">title</i> specifies
+                    full acronym or abbreviation. Try
+                    <abbr title="HyperText Markup Language">HTML5</abbr> abbreviation
+                    (hover on word &ldquo;HTML5&rdquo; to see an effect).
+                </li>
+                <li>
+                    <i class="tag">mark</i> - used to mark a text in one context which is relevant in another
+                    context
+                    for reference purpose. It is similar to when you read a book, you're highlighting a text, so
+                    that
+                    when you take the
+                    same book again you can easily identify important things which you highlighted before.
+                </li>
+            </ul>
+
+            <hr/>
+
+            <p id="w2_using_lists">
+                Include ordered, unordered and definition lists, using <i class=tag>ol</i>, <i class=tag>ul</i> and
+                <i class=tag>dl</i>. The difference
+                between ordered and unordered list is that ordered list is used for things which can be ordered and
+                by
+                default browser will use digits to show order. But you can change that with
+                <abbr title="Cascade Style Sheet">CSS3</abbr>.
+                A list item is marked up within a
+                <i class=tag>li</i> element. A definition list is mostly used for listing some terms
+                followed by a description. <i class=tag>dt</i> stands for definition term and
+                <i class=tag>dd</i> - definition description.
+            </p>
+
+            <div id="list_wrapper" class="big_thing">
+                <div id="ol">
+                    <h3>Ordered List</h3>
+                    <ol>
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3</li>
+                    </ol>
+                </div>
+                <div id="ul">
+                    <h3>Unordered List</h3>
+                    <ul>
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3</li>
+                    </ul>
+                </div>
+                <div id="dl">
+                    <h3>Definition List</h3>
+                    <dl>
+                        <dt>List Item 1</dt>
+                        <dd>This is short description for List Item 1</dd>
+                        <dt>List Item 2</dt>
+                        <dd>This is short description for List Item 2</dd>
+                        <dt>List Item 3</dt>
+                        <dd>This is short description for List Item 3</dd>
+                    </dl>
+                </div>
+            </div>
+
+        </article>
+
+        <nav>
+            <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#bottom">BOTTOM</a></li>
+            </ul>
+        </nav>
+
+        <!--First week post-->
+        <article id="week_1">
+            <header>
+                <h3>Week 1 - Getting Started</h3>
+
+                <p class="published">Published on
+                    <time datetime="2015-10-05">October 5, 2015</time>
+                </p>
+                <p>
+                    I had some experience with
+                    <abbr title="HyperText Markup Language">HTML</abbr>
+                    before this course, that is way first week lab tutorial was not very hard to follow.
+                    I ended up with a 2-page 'website'. Even it uses latest
+                    <abbr title="HyperText Markup Language">HTML5</abbr> tags such as
+                    <i class=tag>article</i> or
+                    <i class=tag>header</i>
+                    it does not look very appealing. In fact, it looks very old.
+                    But I have no doubt that my web site's appearance will improve in following weeks,
+                    and especially when I start to learn
+                    <abbr title="Cascade Style Sheet">CSS3</abbr>.
+                    So to sum up in this week, I learned how to do the following things:
+                </p>
+            </header>
+
+            <hr/>
+
+            <p id="w1_validation">
+                Validate <abbr title="HyperText Markup Language">HTML5</abbr>
+                using the <abbr title="World Wide Web Consortium">W3C</abbr> validator.
+                Which you can find
+                <a href="http://validator.w3.org">here</a>. This is the first thing which you have to do after
+                creating your
+                <abbr title="HyperText Markup Language">HTML5</abbr> document. Validator will check your document
+                syntax errors. Event browsers can render non-valid <abbr
+                    title="HyperText Markup Language">HTML5</abbr>
+                documents is very good practice to do so. Because when a browser meets some unusual construct, it
+                will
+                make
+                a guess how this supposed to be shown and the result might be not what you intended. At
+                <a href="http://validator.w3.org">validator</a> page you can specify an URI, upload a
+                file or just copy and paste your
+                <abbr title="HyperText Markup Language">HTML5</abbr> code.
+            </p>
+
+            <hr/>
+
+            <p id="w1_linking">
+                Create links to external websites with <i class=tag>a</i> anchor using absolute links. To do that
+                you
+                have to specify and address using <i class=att>href</i> attribute.
+                <i class=att>href</i> value is the address of the site which
+                you are pointing your link at. Between
+                <i class=tag>a</i> opening and closing tags goes a text which you click on
+                as
+                <a href="http://html5doctor.com">HTML5 Doctor</a>. If you have a bunch of links grouped together in
+                the
+                same
+                element especially for main sites navigation, you can use
+                <i class=tag>nav</i> tag, which stands for navigation.
+            </p>
+
+            <p class="spec">
+                To create a link pointing to the different page of your website you can use relative or absolute
+                links.
+                The difference between
+                them is not visible to the user and both can point to the same page. The advantage of using
+                relative links is that it is easier to maintain. Let's say you decided to change your domain
+                address.
+                With
+                absolute links you will have to go through all your links and change them individually, with
+                relative -
+                not.
+            </p>
+
+            <p>
+                To point to the different position within a page you do the same thing as with pointing to a
+                different website using <i class=tag>a</i> with <i class=att>href</i> attribute. The difference is that
+                <i class=att>href</i> will contain
+                &ldquo;#&rdquo; followed by element address specified by the
+                <i class=att>id</i> attribute which has to be unique for
+                the page. That means that same <i class=att>id</i> can't point to different elements.
+                Try <a href="#top">go to top of the page</a>.
+            </p>
+
+
+        <pre><code><!--
+            --><span class="comment">&lt;!-- Using absolute link --&gt;</span>&NewLine;<!--
+            --><span class="tag">&lt;a</span>&nbsp;<!--
+            --><span class="att">href</span><!--
+            --><span class="sign">=</span><!--
+            --><span class="value">&quot;http://example.com&quot;</span><!--
+            --><span class="tag">&gt;</span><!--
+            --><span class="text">example</span><!--
+            --><span class="tag">&lt;/a&gt;</span>&NewLine;&NewLine;<!--
+
+            --><span class="comment">&lt;!-- Using relative link --&gt;</span>&NewLine;<!--
+            --><span class="tag">&lt;a</span>&nbsp;<!--
+            --><span class="att">href</span><!--
+            --><span class="sign">=</span><!--
+            --><span class="value">&quot;index.html&quot;</span><!--
+            --><span class="tag">&gt;</span><!--
+            --><span class="text">home</span><!--
+            --><span class="tag">&lt;/a&gt;</span>&NewLine;&NewLine;<!--
+
+            --><span class="comment">&lt;!-- Pointing to same page --&gt;</span>&NewLine;<!--
+            --><span class="tag">&lt;a</span>&nbsp;<!--
+            --><span class="att">href</span><!--
+            --><span class="sign">=</span><!--
+            --><span class="value">&quot;#top&quot;</span><!--
+            --><span class="tag">&gt;</span><!--
+            --><span class="text">got to top</span><!--
+            --><span class="tag">&lt;/a&gt;</span>&NewLine;&NewLine;<!--
+
+            --><span class="comment">&lt;!-- Pointing to relative link's bottom --&gt;</span>&NewLine;<!--
+            --><span class="tag">&lt;a</span>&nbsp;<!--
+            --><span class="att">href</span><!--
+            --><span class="sign">=</span><!--
+            --><span class="value">&quot;index.html#bottom&quot;</span><!--
+            --><span class="tag">&gt;</span><!--
+            --><span class="text">Home footer</span><!--
+            --><span class="tag">&lt;/a&gt;</span><!--
+        --></code></pre>
+
+            <hr/>
+
+            <p id="w1_headers">
+                Correctly use
+                <i class=tag>header</i> and headings from
+                <i class=tag>h1</i> to <i class=tag>h6</i>.
+            </p>
+
+            <ul>
+                <li>
+                    <i class=tag>header</i> - is used to represent section header and can contain headings,
+                    navigation
+                    menu,
+                    logos, tables etc. Important to note, that
+                    <i class=tag>header</i> doesn't introduce a new section, but is a head of a section. If a header
+                    contains only
+                    a heading <i class=tag>h1</i> - <i class=tag>h6</i>, than
+                    <i class=tag>header</i> shouldn't be used.
+                </li>
+                <li>
+                    <i class=tag>h1</i> - <i class=tag>h6</i> - represents section headings and have a rank,
+                    represented
+                    by number in their name. Starting from highest - 1 and smallest - 6.
+                    <i class=tag>h1</i> is used for main page heading,
+                    <i class=tag>h2</i> for section heading and so on. Important thing to
+                    remember is not to use <i class=tag>h1</i> -
+                    <i class=tag>h6</i> for subheadings or subtitles.
+                </li>
+
+            </ul>
+                <pre><code><!--
+                    --><span class="tag">&lt;body&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;header&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span><!--
+                    --><span class="text">Main Page Heading</span><!--
+                    --><span class="tag">&lt;/h1&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span><!--
+                    --><span class="text">Main Page Subheading</span><!--
+                    --><span class="tag">&lt;/p&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/header&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;article&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h2&gt;</span><!--
+                    --><span class="text">Article Heading</span><!--
+                    --><span class="tag">&lt;/h2&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/article&gt;</span>&NewLine;<!--
+                    --><span class="tag">&lt;/body&gt;</span><!--
+                --></code></pre>
+
+            <hr/>
+
+            <p id="w1_using_p_hr_br">
+                Structure paragraphs with
+                <i class=tag>p</i>. This element is used for grouping content. <i class=tag>p</i> is more general
+                grouping element, and shouldn't be used for lists or quotes. By default browser will insert a blank
+                line
+                between
+                paragraphs, but you can change that behaviour with <abbr title="Cascade Style Sheet">CSS3</abbr>
+                To separate content, even more, you can insert
+                <i class=tag>hr </i> (paragraph-level break). Which is used to separate paragraphs in an
+                <i class=tag>article</i> or a
+                <i class=tag>section</i>. <i class=tag>hr </i> shouldn't be used to separate sectioning
+                elements such as <i class=tag>main</i>,
+                <i class=tag>section</i> or
+                <i class=tag>article</i>. If you just want for the element to start in a new line, then use break
+                <i class=tag>br</i>.
+            </p>
+
+            <hr/>
+
+            <p id="w1_add_image">
+                Add image to <abbr title="HyperText Markup Language">HTML5</abbr> website using
+                <i class=tag>figure</i> and
+                <i class=tag>img </i> tags. Most important things to remember when adding an image to your website is
+                to
+                not forget <i class=tag>figure</i> element which may contain any kind of figure (diagram,
+                illustration,
+                chart, photo). To contain images in the <i class=tag>figure</i> you use <i class=tag>img </i> tag with
+                attributes like <i class=att>alt</i>, which value will be used to display a
+                text, if the browser will fail to load an image. And the last thing to remember is to
+                include
+                <i class=tag>figcaption</i> which can be a short description for an image or author's details.
+            </p>
+
+            <hr/>
+
+            <p id="w1_open_image">Open image in a new tab using <i class=value> _blank</i> value for
+                <i class=att>target</i> attribute in an
+                <i class=tag>a</i> element. Without
+                <i class=att>target</i> attribute, link will be opened in the same browser
+                window. It is useful if you have an image in your website which is not high resolution, but you
+                want to
+                provide bigger resolution. Try it yourself, if you click
+                <a href="blank_example.html" target="_blank">this</a> link,
+                browser will open it in a new tab.
+
+                asdfasdf a
+            </p>
+                <pre><code><!--
+                    --><span class="tag">&lt;figure&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;a</span>&nbsp;<!--
+                    --><span class="att">href</span><!--
+                    --><span class="sign">=</span><!--
+                    --><span class="value">&quot;image.html&quot;</span>&nbsp;<!--
+                    --><span class="att">target</span><!--
+                    --><span class="sign">=</span><!--
+                    --><span class="value">&quot;_blank&quot;</span><!--
+                    --><span class="tag">&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;img</span>&nbsp;<!--
+                    --><span class="att">src</span><!--
+                    --><span class="sign">=</span><!--
+                    --><span class="value">&quot;images/image.png&quot;</span>&nbsp;<!--
+                    --><span class="att">alt</span><!--
+                    --><span class="sign">=</span><!--
+                    --><span class="value">&quot;text to display&quot;</span><!--
+                    --><span class="tag">&nbsp;/&gt;</span><!--
+                    --><span class="tag">&lt;/a&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;figcaption&gt;</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text">Image description</span>&NewLine;<!--
+                    -->&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/figcaption&gt;</span>&NewLine;<!--
+                    --><span class="tag">&lt;/figure&gt;</span><!--
+                --></code></pre>
+        </article>
+        <nav>
+            <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#bottom">BOTTOM</a></li>
+            </ul>
+        </nav>
+
+    </main>
+    <aside>
+        <nav id="menu">
+            <ul>
+                <li><a href="#week_8">Week 8 - css3 responsive layout</a></li>
+                <li>
+                    <ul>
+                        <li><a href="#w8_flexbox">Flex box</a></li>
+                        <li><a href="#w8_review">Review of my Learning Journal</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#week_7">Week 7 - Flexible media +</a></li>
+                <li>
+                    <ul>
+                        <li><a href="#w7_color_map">How to represent color on computer?</a></li>
+                        <li><a href="#w7_rgb_color_model">Rgba - color model</a></li>
+                        <li><a href="#w7_digital_images">Digital images</a></li>
+                        <li><a href="#w7_tools">Tools for web development</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#week_6">Week 6 - Introduction to responsive web design</a></li>
+                <li>
+                    <ul>
+                        <li><a href="#w6_why_RWD">RWD - why do we need?</a></li>
+                        <li><a href="#w6_viewport">Viewport attribute</a></li>
+                        <li><a href="#w6_media_query">Media queries</a></li>
+                    </ul>
+                </li>
+                <li><a href="#week_5">Week 5 - CSS cascade and more</a></li>
+                <li>
+                    <ul>
+                        <li><a href="#w5_css_cascade">CSS cascade</a></li>
+                        <li><a href="#w5_box_model">Box model</a></li>
+                        <li><a href="#w5_measurements">Measurements</a></li>
+                    </ul>
+                </li>
+                <li><a href="#week_4">Week 4 - CSS basics</a></li>
+                <li>
+                    <ul>
+                        <li><a href="#w4_external_css">Attaching external CSS</a></li>
+                        <li><a href="#w4_reset_vs_normalize">Reset vs Normalize</a></li>
+                        <li><a href="#w4_css_selectors">CSS Selectors</a></li>
+                        <li><a href="#w4_typography">Importance of Typography</a></li>
+                    </ul>
+                </li>
+                <li><a href="#week_3">Week 3 - More html5 markup</a></li>
+                <li>
+                    <ul>
+                        <li><a href="#w3_main_aside">Main and aside elements</a></li>
+                        <li><a href="#w3_section_article">Difference between section and article</a></li>
+                        <li><a href="#w3_creating_tables">Creating tables</a></li>
+                        <li><a href="#w3_head">Head element</a></li>
+                    </ul>
+                </li>
+                <li><a href="#week_2">Week 2 - Marking up content in the learning journal</a></li>
+                <li>
+                    <ul>
+                        <li><a href="#w2_using_lists">Ordered, Unordered and Definition Lists</a></li>
+                        <li><a href="#w2_text_level_semantics">Difference Between i, b, em ...</a></li>
+                        <li><a href="#w2_publication_date">Add date to Your Articles</a></li>
+                        <li><a href="#w2_character_entity">Character entities.Entity References</a></li>
+                    </ul>
+                </li>
+                <li><a href="#week_1">Week 1 - Getting Started</a></li>
+                <li>
+                    <ul>
+                        <li><a href="#w1_open_image">Open Image in New Tab</a></li>
+                        <li><a href="#w1_add_image">Add Image to Website</a></li>
+                        <li><a href="#w1_using_p_hr_br">Using p, hr and br elements</a></li>
+                        <li><a href="#w1_headers">Using header and h1-6</a></li>
+                        <li><a href="#w1_linking">How to link</a></li>
+                        <li><a href="#w1_validation">W3C validator</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <footer>
+            <nav>
+                <h3>References</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>
+                    </li>
+                    <li>
+                        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">css trics - flexbox</a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Trichromacy">Trichromatic theory</a>
+                    </li>
+                    <li>
+                        <a href="http://fortune.com/2015/08/07/apple-post-pc-world/">
+                            Usage of devices for access to Internet</a>
+                    </li>
+                    <li><a href="https://necolas.github.io/normalize.css/">normalize.css</a></li>
+                    <li>
+                        <a href="https://code.google.com/p/html5resetcss/downloads/detail?name=html5reset-1.6.1.css&can=2&q=">
+                            reset.css
+                        </a>
+                    </li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS reference</a></li>
+                    <li>
+                        <a href="https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en">
+                            Chrome extension - what font
+                        </a>
+                    </li>
+                    <li><a href="http://practicaltypography.com/">Practical typography</a></li>
+                    <li><a href="https://www.google.com/fonts">Google fonts</a></li>
+                    <li><a href="http://jigsaw.w3.org/css-validator/">CSS3 validator</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="http://www.amazon.co.uk/HTML-CSS-Design-Build-Sites/dp/1118008189">HTML & CSS design
+                            and build web sites</a>
+                    </li>
+                    <li><a href="http://docs.webplatform.org/wiki/guides/the_html_head">The HTML5 &lt;head&gt;</a></li>
+                    <li><a href="http://html5doctor.com/i-b-em-strong-element/"> The i, b, em, strong elements </a></li>
+                    <li><a href="http://dev.w3.org/html5/html-author/charref">W3C entities reference chart</a></li>
+                    <li><a href="http://validator.w3.org">W3C markup validation service</a></li>
+                    <li><a href="http://html5doctor.com">HTML5 Doctor - helping you implement HTML5 today</a></li>
+                    <li><a href="http://www.coffeecup.com/help/articles/absolute-vs-relative-pathslinks/">
+                        Absolute vs. Relative links
+                    </a></li>
+                    <li>
+                        <a href="http://www.w3.org/html/wg/drafts/html/master/">Latest HTML working 5.1
+                            specification</a>
+                    </li>
+                    <li><a href="http://stackoverflow.com/questions/15551779/open-link-in-new-tab">
+                        How to open link in new tab
+                    </a></li>
+                </ul>
+                <ul>
+                    <li><a href="http://www.cssmatic.com/box-shadow">Shadow generator</a></li>
+                    <li><a href="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF">Palleton</a></li>
+                    <li><a href="http://www.colorzilla.com/gradient-editor/">Gradient generator</a></li>
+                    <li><a href="https://pixlr.com/editor/">Online image editor</a></li>
+                    <li><a href="http://galacticmilk.com/bg/">Pattern generator</a></li>
+                    <li><a href="http://www.css3maker.com/css3-transform.html">Transform generator</a></li>
+                    <li>
+                        <a href="https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en">What
+                            font</a></li>
+                    <li><a href="http://www.colorzilla.com/chrome/">Color eyedropper</a></li>
+                    <li><a href="http://pxtoem.com/">px to em</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </aside>
+    <footer id="bottom">
+        <small>
+            &copy; 2015 Dainius Grinciukas <a href="mailto:dg4675dg@gmail.com">dg4675dg@gmail.com</a>
+        </small>
+    </footer>
+</div>
+
+</body>
+</html>
